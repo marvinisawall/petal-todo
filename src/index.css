@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Caveat:wght@500;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cream: #fdf8f3;
+  --petal-pink: #f9a8d4;
+  --petal-lavender: #c4b5fd;
+  --petal-sky: #93c5fd;
+  --petal-mint: #86efac;
+  --petal-butter: #fde68a;
+  --petal-peach: #fdba74;
+
+  --text-dark: #3d2f2f;
+  --text-mid: #7c6060;
+  --text-soft: #b09090;
+  --border: rgba(61,47,47,0.10);
+  --border-mid: rgba(61,47,47,0.16);
+
+  --card-bg: rgba(255,255,255,0.72);
+  --card-hover: rgba(255,255,255,0.92);
+  --glass: rgba(255,255,255,0.55);
+
+  --shadow-soft: 0 2px 16px rgba(180,130,130,0.10);
+  --shadow-card: 0 4px 24px rgba(180,130,130,0.14);
+  --shadow-float: 0 8px 40px rgba(180,130,130,0.18);
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+  --font-display: 'Lora', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-accent: 'Caveat', cursive;
+
+  --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--cream);
+  color: var(--text-dark);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Soft background blobs */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(80px);
+  opacity: 0.45;
+}
+
+body::before {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #f9a8d4 0%, #fde68a 60%, transparent 100%);
+  top: -200px;
+  right: -200px;
+}
+
+body::after {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #c4b5fd 0%, #93c5fd 60%, transparent 100%);
+  bottom: -150px;
+  left: -150px;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(180,130,130,0.25);
+  border-radius: 10px;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--petal-pink);
+  outline-offset: 2px;
+  border-radius: 4px;
+}

@@ -1,0 +1,35 @@
+.empty {
+  text-align: center;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 2.8rem;
+  margin-bottom: 4px;
+  animation: sway 3s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  font-style: italic;
+}
+
+.sub {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  max-width: 240px;
+  line-height: 1.5;
+}

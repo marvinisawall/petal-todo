@@ -1,0 +1,109 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  gap: 32px;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 28px 0 40px;
+}
+
+.topBar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.topLeft {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.headingSub {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text-mid);
+}
+
+.taskCount {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--text-soft);
+}
+
+.clearBtn {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-soft);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 5px 14px;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.clearBtn:hover {
+  background: #fca5a522;
+  border-color: #fca5a5;
+  color: var(--text-mid);
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.footer {
+  padding-top: 16px;
+  border-top: 1px dashed var(--border);
+  text-align: center;
+}
+
+.footerText {
+  font-family: var(--font-accent);
+  font-size: 0.88rem;
+  color: var(--text-soft);
+}
+
+/* Mobile responsive */
+@media (max-width: 700px) {
+  .layout {
+    flex-direction: column;
+    padding: 0 16px;
+    gap: 0;
+  }
+
+  .main {
+    padding: 16px 0 40px;
+  }
+
+  .heading {
+    font-size: 1.35rem;
+  }
+}
